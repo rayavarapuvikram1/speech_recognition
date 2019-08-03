@@ -16,7 +16,7 @@ try:
 except sr.UnknownValueError:
     print("Sphinx could not understand audio")
 except sr.RequestError as e:
-    print("Sphinx error; {0}".format(e))
+    print(f"Sphinx error; {e}")
 
 # recognize speech using Google Speech Recognition
 try:
@@ -27,7 +27,7 @@ try:
 except sr.UnknownValueError:
     print("Google Speech Recognition could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Google Speech Recognition service; {0}".format(e))
+    print(f"Could not request results from Google Speech Recognition service; {e}")
 
 # recognize speech using Google Cloud Speech
 GOOGLE_CLOUD_SPEECH_CREDENTIALS = r"""INSERT THE CONTENTS OF THE GOOGLE CLOUD SPEECH JSON CREDENTIALS FILE HERE"""
@@ -36,7 +36,7 @@ try:
 except sr.UnknownValueError:
     print("Google Cloud Speech could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Google Cloud Speech service; {0}".format(e))
+    print(f"Could not request results from Google Cloud Speech service; {e}")
 
 # recognize speech using Wit.ai
 WIT_AI_KEY = "INSERT WIT.AI API KEY HERE"  # Wit.ai keys are 32-character uppercase alphanumeric strings
@@ -45,7 +45,7 @@ try:
 except sr.UnknownValueError:
     print("Wit.ai could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Wit.ai service; {0}".format(e))
+    print(f"Could not request results from Wit.ai service; {e}")
 
 # recognize speech using Microsoft Bing Voice Recognition
 BING_KEY = "INSERT BING API KEY HERE"  # Microsoft Bing Voice Recognition API keys 32-character lowercase hexadecimal strings
@@ -54,7 +54,7 @@ try:
 except sr.UnknownValueError:
     print("Microsoft Bing Voice Recognition could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Microsoft Bing Voice Recognition service; {0}".format(e))
+    print(f"Could not request results from Microsoft Bing Voice Recognition service; {e}")
 
 # recognize speech using Microsoft Azure Speech
 AZURE_SPEECH_KEY = "INSERT AZURE SPEECH API KEY HERE"  # Microsoft Speech API keys 32-character lowercase hexadecimal strings
@@ -63,7 +63,7 @@ try:
 except sr.UnknownValueError:
     print("Microsoft Azure Speech could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Microsoft Azure Speech service; {0}".format(e))
+    print(f"Could not request results from Microsoft Azure Speech service; {e}")
 
 # recognize speech using Houndify
 HOUNDIFY_CLIENT_ID = "INSERT HOUNDIFY CLIENT ID HERE"  # Houndify client IDs are Base64-encoded strings
@@ -73,7 +73,7 @@ try:
 except sr.UnknownValueError:
     print("Houndify could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from Houndify service; {0}".format(e))
+    print(f"Could not request results from Houndify service; {e}")
 
 # recognize speech using IBM Speech to Text
 IBM_USERNAME = "INSERT IBM SPEECH TO TEXT USERNAME HERE"  # IBM Speech to Text usernames are strings of the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -83,4 +83,4 @@ try:
 except sr.UnknownValueError:
     print("IBM Speech to Text could not understand audio")
 except sr.RequestError as e:
-    print("Could not request results from IBM Speech to Text service; {0}".format(e))
+    print(f"Could not request results from IBM Speech to Text service; {e}")
